@@ -13,7 +13,7 @@ app.use(cors())
 app.use(express.json())
 app.use(cookieParser())
 
-app.get("/", (req, res) => {
+app.get("/", authanticate, (req, res) => {
     res.send({ "msg": "welcome to backend" })
 })
 
